@@ -144,7 +144,7 @@ class CausalCNN(torch.nn.Module):
             in_channels_block = in_channels if i == 0 else channels
             layers += [CausalConvolutionBlock(
                 in_channels_block, channels, kernel_size, dilation_size,
-                forward=forward,
+                forward,
             )]
             # double the dilation at each step if forward, otherwise
             # halve the dilation
